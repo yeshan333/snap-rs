@@ -22,6 +22,19 @@
 - **Dark mode** — follows macOS system appearance
 - **Native feel** — macOS-style UI with SF font and system colors
 
+## Screenshots
+
+<table align="center">
+  <tr>
+    <td><img src="docs/screenshots/settings-dock-apps.png" width="300" alt="Dock Apps List" /></td>
+    <td><img src="docs/screenshots/settings-about.png" width="300" alt="Settings & About" /></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>Dock Apps & Shortcuts</sub></td>
+    <td align="center"><sub>Settings & About</sub></td>
+  </tr>
+</table>
+
 ## Tech Stack
 
 - **Backend**: Rust + [Tauri v2](https://v2.tauri.app/)
