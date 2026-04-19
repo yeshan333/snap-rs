@@ -21,14 +21,16 @@ pub fn register_shortcuts(
 
     let count = dock_apps.len().min(MAX_SHORTCUTS);
 
-    for i in 0..count {
+    for (i, dock_app) in
+        dock_apps.iter().enumerate().take(count)
+    {
         let Some(key) = shortcut_key_for_index(i) else {
             continue;
         };
         let Ok(shortcut) = key.parse::<Shortcut>() else {
             continue;
         };
-        let bundle_id = dock_apps[i].bundle_id.clone();
+        let bundle_id = dock_app.bundle_id.clone();
 
         if let Err(e) = app.global_shortcut().on_shortcut(
             shortcut,
